@@ -1,12 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Audiowide&family=Bruno+Ace+SC&family=Goldman:wght@400;700&family=Iceberg&family=Michroma&family=Nabla&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
 
-/* Oculta la insignia / badge inyectada por Netlify */
-[data-netlify-badge], 
-.netlify-badge,
-#netlify-badge {
-  display: none !important;
-}
 
 /* =========================
    TEMA OSCURO (Por defecto)
