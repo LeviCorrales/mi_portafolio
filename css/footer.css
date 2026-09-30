@@ -1,0 +1,102 @@
+/* ========================= FOOTER ========================= */
+.footer {
+  position: relative;
+  padding: 55px 0 25px;
+  
+  background: linear-gradient(to top, var(--bg-soft), var(--bg));
+  overflow: hidden;
+}
+
+
+/* Contenedor */
+.footer-container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+/* Marca */
+.footer-brand {
+  text-align: center;
+}
+
+.footer-brand strong {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--text);
+}
+
+.footer-brand strong span {
+  color: var(--accent);
+}
+
+.footer-brand p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: .9rem;
+  letter-spacing: .3px;
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 25px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 1rem;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.footer-links a i {
+  font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+/* Separador */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 42px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-dark);
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.footer-bottom b {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 45px;
+    padding-bottom: 65px;
+  
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

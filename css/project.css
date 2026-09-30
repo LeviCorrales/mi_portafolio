@@ -1,0 +1,766 @@
+/* PROJECTS */
+
+.projects-section {
+    padding-top: 65px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.heading-line {
+    width: 2px;
+    height: 34px;
+    background: var(--accent);
+    margin: 18px auto 0;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 50px;
+    
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.project h3 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    background: var(--bg-light);
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--sombra);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.tags .tag i {
+    font-size: 1.1rem;
+}
+
+/* COLORES DE ICONOS */
+.tag.html i       { color: var(--html); }
+.tag.css i        { color: var(--css); }
+.tag.javascript i { color: var(--js); }
+.tag.php i        { color: var(--php); }
+.tag.mysql i      { color: var(--my-sql); }
+.tag.python i     { color: var(--py); }
+.tag.excel i      { color: var(--excel); }
+.tag.powerbi i    { color: var(--power-bi); }
+
+.contaienr-project-info{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-info{
+    width: 100%;
+}
+
+.project-info p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-top: 16px;
+    max-width: 95%;
+}
+
+.project-links{
+    margin-top: 5rem;
+    display: flex;
+    gap: 10px;
+
+   
+}
+
+.btn-primary{
+    font-weight: bold;
+    background-color: var(--accent);
+    border-radius: 10px;
+    padding: 5px 15px;
+    display: inline-block;
+    border: none;
+    color: var(--text-dark);
+    font-size: .9rem;
+     /* border: 1px solid var(--line); */
+   
+    transition: color .2s ease, background-color .2s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.text-link {
+    background-color: var(--bg-light);
+    /* border: 1px solid var(--line); */
+    
+}
+
+.btn-primary:hover {
+    color: var(--text);
+    
+  
+
+    /* Retroiluminación multicapa (Efecto halo volumétrico estático) */
+    box-shadow: 
+        0 0 4px var(--accent),   /* 1. Núcleo de luz: muy intenso y pegado al borde */
+        0 0 16px var(--line),  /* 2. Dispersión media: luz ambiental que se expande */
+        0 0 32px var(--line-dark), /* 3. Halo exterior: desenfoque suave y difuso */
+        0 8px 20px rgba(0, 0, 0, 0.6);      /* 4. Sombra física inferior: crea profundidad realista */
+}
+
+.text-link:hover {
+
+
+    /* Retroiluminación multicapa (Efecto halo volumétrico estático) */
+    box-shadow: 
+        0 0 2px var(--white),   /* 1. Núcleo de luz: muy intenso y pegado al borde */
+        0 0 16px rgba(255, 255, 255, 0.4),  /* 2. Dispersión media: luz ambiental que se expande */
+        0 0 32px rgba(255, 255, 255, 0.15), /* 3. Halo exterior: desenfoque suave y difuso */
+        0 8px 20px rgba(0, 0, 0, 0.6);      /* 4. Sombra física inferior: crea profundidad realista */
+   
+}
+
+
+
+.text-link i{
+    font-size: .7rem;
+    margin-left: 5px;
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+.container-project-img{
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+.project-image {
+    position: relative;
+    
+    height: 250px;
+    aspect-ratio: 18 / 9;
+
+    overflow: visible;
+
+    border: 1px solid var(--sombra);
+    border-radius: 5px;
+
+    background: var(--bg-soft);
+
+    isolation: isolate;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   3D BACK LAYER
+========================= */
+
+.project-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    transform:
+        translate(11px, -11px);
+
+background-color: var(--bg-soft);
+    border-radius: 5px;
+
+}
+
+
+/* Segunda profundidad */
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    transform:
+        translate(20px, -20px);
+
+border: 1px solid var(--sombra-light);
+
+    border-radius: 5px;
+
+   
+}
+
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.project-carousel {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   TRACK
+========================= */
+
+.project-track {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform .55s cubic-bezier(.4, 0, .2, 1);
+}
+
+
+/* =========================
+   SLIDES
+========================= */
+
+.project-slide {
+    width: 100%;
+    height: 100%;
+
+    flex: 0 0 100%;
+
+    overflow: hidden;
+}
+
+
+.project-slide img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    user-select: none;
+    pointer-events: none;
+
+    transition:
+        transform .6s ease;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.project-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--sombra),
+            transparent 18%,
+            transparent 82%,
+            var(--sombra)
+        ),
+        linear-gradient(
+            0deg,
+            var(--sombra),
+            transparent 35%,
+            transparent 70%,
+            var(--sombra)
+        );
+}
+
+
+/* =========================
+   ARROW BUTTONS
+========================= */
+
+.carousel-btn {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 5;
+
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    border: 2px solid var(--sombra-light);
+    border-radius: 50%;
+
+    background: transparent;
+
+    backdrop-filter: blur(8px);
+
+    color: var(--text);
+
+
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.carousel-btn i{
+   padding: 10px 13px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    
+}
+
+
+.carousel-prev {
+    left: 5px;
+}
+
+
+.carousel-next {
+    right: 5px;
+}
+
+
+.carousel-btn:hover {
+    background: var(--bg-light);
+
+
+
+    color: var(--text);
+
+   
+}
+
+
+.carousel-btn:active {
+    transform:
+        translateY(-50%)
+        scale(.95);
+}
+
+
+/* =========================
+   EXPAND BUTTON
+========================= */
+
+.carousel-expand {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    z-index: 6;
+
+
+    
+
+    padding: 0;
+
+    border: 2px solid var(--sombra-light);
+    border-radius: 5px;
+
+    background: transparent;
+
+    backdrop-filter: blur(8px);
+
+    color: var(--text);
+
+    
+    display: inline-block;
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.carousel-expand i{
+    padding: 7px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+}
+
+
+.carousel-expand:hover {
+    background: var(--bg-light);
+    
+
+
+}
+
+
+.carousel-expand:active {
+    transform: scale(.95);
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.carousel-dots {
+    position: absolute;
+
+    bottom: 14px;
+    left: 50%;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    transform: translateX(-50%);
+
+    padding: 6px 9px;
+
+    border: 2px solid var(--sombra-light);
+    border-radius: 50px;
+
+    background: var(--sombra);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.carousel-dot {
+    width: 6px;
+    height: 6px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--sombra-light);
+
+    cursor: pointer;
+
+    transition:
+        width .3s ease,
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.carousel-dot.active {
+    width: 20px;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+
+    box-shadow:
+        0 0 8px var(--line);
+}
+
+
+/* =========================
+   HOVER IMAGE
+========================= */
+
+.project-image:hover .project-slide img {
+    transform: scale(1.015);
+}
+
+
+
+
+/* =========================================================
+   RESPONSIVE — PROJECTS
+   ========================================================= */
+
+
+/* =========================
+   TABLET / PANTALLAS MEDIANAS
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .projects-section {
+        padding-top: 55px;
+    }
+
+    .section-heading {
+        margin-bottom: 60px;
+    }
+
+
+    /* ---------- PROJECT ---------- */
+
+    .project {
+        gap: 35px;
+        padding: 20px;
+        margin-bottom: 45px;
+    }
+
+    .project h3 {
+        font-size: 1.9rem;
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .contaienr-project-info {
+        width: 48%;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .project-links {
+        margin-top: 3.5rem;
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------- TAGS ---------- */
+
+    .tags {
+        gap: 7px;
+    }
+
+    .tags .tag {
+        padding: 5px 13px;
+        font-size: .82rem;
+    }
+
+    .tags .tag i {
+        font-size: 1rem;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .container-project-img {
+        width: 52%;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 18 / 9;
+    }
+
+}
+
+
+/* =========================
+   TABLET VERTICAL
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .projects-section {
+        padding-top: 50px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+
+    /* ---------- PROJECT ---------- */
+
+    .project {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 40px;
+
+        padding: 15px 0;
+        margin-bottom: 60px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .container-project-img {
+        order: -1;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .project-image {
+        width: min(100%, 650px);
+        height: auto;
+        aspect-ratio: 18 / 9;
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .contaienr-project-info {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .project h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-info p {
+        font-size: .98rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+
+    /* ---------- LINKS ---------- */
+
+    .project-links {
+        margin-top: 2.5rem;
+    }
+
+}
+
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .projects-section {
+      
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* ---------- PROJECT ---------- */
+
+    .project {
+        gap: 30px;
+        padding: 10px 0;
+        margin-bottom: 50px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .container-project-img {
+        width: 100%;
+    }
+
+    .project-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* Ajustamos la profundidad para que
+       no se salga demasiado de la pantalla */
+
+    .project-image::before {
+        transform: translate(7px, -7px);
+    }
+
+    .project-image::after {
+        transform: translate(12px, -12px);
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .project h3 {
+        font-size: 1.55rem;
+        margin-bottom: 10px;
+    }
+
+   
+}
+
+
+/* =========================
+   MÓVIL PEQUEÑO
+   ========================= */
+
+@media (max-width: 400px) {
+
+   
+}
+
+
+/* =========================
+   MÓVIL MUY PEQUEÑO
+   ========================= */
+
+@media (max-width: 340px) {
+
+
+
+}
+

@@ -1,0 +1,615 @@
+.hero {
+    padding-top: 60px;
+    margin-bottom: 50px;
+    min-height: calc(100vh - 65px);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(350deg, #140203 0%, #0b0001 40%, #050001 100%);
+}
+/* Esfera luminosa difusa */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    top: 15%;
+    left: 0%;
+    transform: translateY(-50%);
+    background: #ad040440; /* Rojo con transparencia */
+    filter: blur(110px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+.hero-inner {
+    width: min(1200px, 90%);
+    min-height: calc(100vh - 65px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    padding: 25px 0 50px;
+}
+
+.hero-copy {
+    padding-top: 5px;
+}
+
+.greeting {
+    font-family: "Goldman", sans-serif;
+    font-size: clamp(2.7rem, 4.2vw, 4.3rem);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-size: clamp(3.1rem, 5vw, 5rem);
+    line-height: .98;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--text-dark);
+    /* text-shadow: 0 0 10px var(--red); */
+}
+
+.hero h2 {
+    color: var(--muted-2);
+    font-family: "Goldman", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+
+.description {
+    color: var(--muted);
+    max-width: 580px;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+/* Base unificada para los botones */
+.btn-hero {
+    position: relative; /* Necesario para posicionar los efectos internos/externos */
+    min-width: 180px;
+    padding: 12px 24px; /* Ligeramente ajustado para compensar los bordes visuales */
+    border-radius: 50px;
+    font-family: "Goldman", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate; /* Crea un nuevo contexto de apilamiento para los z-index */
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hero span {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.availability {
+    display: flex;
+    gap: 10px;
+    margin-top: 38px;
+    color: var(--muted);
+    font-size: .9rem;
+    align-items: center;
+}
+
+.availability i {
+    color: var(--accent);
+  
+    font-size: 1.3rem;
+}
+
+.socials{
+
+}
+.socials {
+    display: flex;
+    align-items: center;
+    color: var(--muted);
+   
+    margin-top: 38px;
+}
+
+.socials p{
+    margin-right: 5px;
+}
+
+.socials a {
+    position: relative; /* Indispensable para posicionar el tooltip */
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: transform .1s cubic-bezier(.4, 0, .2, 1),
+                color .2s ease;
+    padding: 0px 10px;
+    
+}
+
+.socials a:hover {
+    color: var(--text);
+
+}
+
+/* 1. CUERPO DE LA VENTANITA (TOOLTIP) */
+.socials a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: calc(100% + 10px); /* Lo ubica por encima del icono */
+    left: 50%;
+    transform: translateX(-50%) translateY(6px); /* Para animación suave de subida */
+    background-color: var(--bg-light); /* Color de fondo de la nota */
+    color: var(--text-dark); /* Color del texto */
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Evita interferencias con el cursor */
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 10;
+   
+}
+
+/* 2. TRIANGULITO DE LA NOTA */
+.socials a::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px); /* Queda pegado justo abajo de la caja */
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    /* Truco CSS para hacer un triángulo */
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: var(--bg-light) transparent transparent transparent; /* Mismo color que la caja */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 11;
+}
+
+/* 3. MOSTRAR CON ANIMACIÓN EN HOVER */
+.socials a:hover::after,
+.socials a:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Sube suavemente a su posición final */
+}
+.hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-ring {
+    position: relative;
+
+    width: 380px;
+    height: 380px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.portrait-placeholder {
+    position: relative;
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    z-index: 5;
+
+    background: var(--bg);
+}
+
+.portrait-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — HERO
+   ========================================================= */
+
+/* =========================
+   TABLET / PANTALLAS MEDIANAS
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .hero-inner {
+        width: min(92%, 900px);
+        grid-template-columns: 1fr 0.85fr;
+        gap: 25px;
+    }
+
+    .greeting {
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 5.5vw, 4.3rem);
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        max-width: 500px;
+        font-size: .95rem;
+    }
+
+    .portrait-ring {
+        width: 320px;
+        height: 320px;
+    }
+
+    .portrait-placeholder {
+        width: 235px;
+        height: 235px;
+    }
+
+}
+
+
+/* =========================
+   TABLET VERTICAL
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+        padding: 90px 0 80px;
+    }
+
+    .hero-inner {
+        width: min(90%, 650px);
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+
+        gap: 55px;
+        padding: 30px 0 20px;
+
+        text-align: center;
+    }
+
+
+    /* ---------- RETRATO ---------- */
+
+    .hero-portrait {
+        order: -1;
+        width: 100%;
+    }
+
+    .portrait-ring {
+        width: 300px;
+        height: 300px;
+    }
+
+    .portrait-placeholder {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    /* ---------- TEXTO ---------- */
+
+    .hero-copy {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .greeting {
+        font-size: clamp(2.3rem, 7vw, 3.3rem);
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 8vw, 4.2rem);
+        letter-spacing: -1.5px;
+        margin-bottom: 18px;
+    }
+
+    .hero h2 {
+        font-size: 1.35rem;
+        margin-bottom: 22px;
+    }
+
+    .description {
+        margin: 0 auto;
+        max-width: 560px;
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- BOTONES ---------- */
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .btn-hero {
+        min-width: 170px;
+    }
+
+
+    /* ---------- DISPONIBILIDAD ---------- */
+
+    .availability {
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+
+    /* ---------- REDES ---------- */
+
+    .socials {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+}
+
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 80px 0 65px;
+    }
+
+    .hero-inner {
+        width: min(92%, 500px);
+        gap: 42px;
+        padding: 20px 0;
+    }
+
+
+    /* ---------- RETRATO ---------- */
+
+    .portrait-ring {
+        width: 260px;
+        height: 260px;
+    }
+
+    .portrait-placeholder {
+        width: 195px;
+        height: 195px;
+    }
+
+
+    /* ---------- TEXTO ---------- */
+
+    .greeting {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: -1px;
+        margin-bottom: 16px;
+    }
+
+    .hero h2 {
+        font-size: 1.15rem;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        width: 100%;
+        font-size: .92rem;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- BOTONES ---------- */
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 27px;
+    }
+
+    .btn-hero {
+        width: min(100%, 280px);
+        min-width: 0;
+    }
+
+
+    /* ---------- DISPONIBILIDAD ---------- */
+
+    .availability {
+        margin-top: 28px;
+        gap: 8px;
+        font-size: .85rem;
+    }
+
+    .availability i {
+        font-size: 1.15rem;
+    }
+
+
+    /* ---------- REDES ---------- */
+
+    .socials {
+        margin-top: 25px;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .socials p {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .socials a {
+        padding: 4px 9px;
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* =========================
+   MÓVIL PEQUEÑO
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 55px;
+    }
+
+    .hero-inner {
+        width: 90%;
+        gap: 35px;
+    }
+
+
+    /* ---------- RETRATO ---------- */
+
+    .portrait-ring {
+        width: 225px;
+        height: 225px;
+    }
+
+    .portrait-placeholder {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    /* ---------- TEXTO ---------- */
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.05rem;
+    }
+
+    .description {
+        font-size: .88rem;
+    }
+
+
+    /* ---------- BOTONES ---------- */
+
+    .btn-hero {
+        width: 100%;
+        max-width: 260px;
+        padding: 11px 20px;
+        font-size: .9rem;
+    }
+
+
+    /* ---------- DISPONIBILIDAD ---------- */
+
+    .availability {
+        font-size: .8rem;
+    }
+
+    .availability i {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================
+   MÓVILES MUY PEQUEÑOS
+   ========================= */
+
+@media (max-width: 340px) {
+
+    .portrait-ring {
+        width: 200px;
+        height: 200px;
+    }
+
+    .portrait-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .greeting {
+        font-size: 1.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.05rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: .84rem;
+    }
+
+}
+

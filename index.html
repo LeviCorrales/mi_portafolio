@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Elvis">
+    <title>Elvis | Software & Data</title>
+    <link rel="stylesheet" href="css/estilos_generales.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/sobre_mi.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/modal_carrusel.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="body">
+
+
+
+
+<header class="header">
+    <div class="container nav">
+
+        <!-- LOGO -->
+        <a href="#inicio" class="logo">Elvis</a>
+
+        <!-- CONTROLES -->
+        <div class="nav-controls">
+
+            <button class="theme-btn" aria-label="Cambiar tema">
+                <i class="fa-solid fa-moon theme-icon"></i>
+            </button>
+
+            <div class="language-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+
+<!-- NAVEGACIÓN -->
+<div class="menu-wrapper">
+
+    <nav class="menu">
+        <span class="menu-indicator"></span>
+
+        <a href="#inicio">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a href="#sobre-mi">
+            <i class="fa-regular fa-user"></i>
+            <span>Sobre mí</span>
+        </a>
+
+        <a href="#proyectos">
+            <i class="fa-regular fa-folder"></i>
+            <span>Proyectos</span>
+        </a>
+
+        <a href="#contacto">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Contacto</span>
+        </a>
+    </nav>
+
+</div>
+
+<main>
+
+    <!-- HERO -->
+   <section id="inicio" class="hero">
+
+    <!-- ESTRELLAS FUGACES HERO -->
+    <div class="shooting-star" aria-hidden="true">
+        <div class="star-tail"></div>
+        <div class="star-head"></div>
+    </div>
+    <div class="shooting-star" aria-hidden="true">
+        <div class="star-tail"></div>
+        <div class="star-head"></div>
+    </div>
+
+    <!-- ONDA EXPANSIVA -->
+    <div class="hero-wave" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="greeting">Hola, soy</p>
+
+            <h1>
+                <span>Elvis</span>
+                <span>Corrales</span>
+            </h1>
+
+            <h2>Desarrollador Web &amp; Analista de Datos</h2>
+
+            <p class="description">
+                Desarrollador junior con experiencia en desarrollo web,
+                bases de datos, análisis de información y creación de
+                soluciones digitales.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-hero btn-primary-hero">
+                    <span>✉</span> Contáctame
+                </a>
+
+                <a href="#" class="btn-hero btn-secondary-hero">
+                    <span>↓</span> Descargar CV
+                </a>
+            </div>
+
+            <div class="availability">
+                <i class="fa-regular fa-clock"></i>
+                <p>Disponible para trabajar</p>
+            </div>
+
+            <div class="socials">
+                <p>Sigueme</p>
+
+                <a href="#" aria-label="LinkedIn" data-title="Linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="GitHub" data-title="Github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="mailto:tuemail@ejemplo.com" aria-label="Email" data-title="Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+
+            
+        </div>
+
+        <div class="hero-portrait">
+            <div class="portrait-ring">
+
+                <div class="pulse pulse-1"></div>
+                <div class="pulse pulse-2"></div>
+                <div class="pulse pulse-3"></div>
+
+                <div class="portrait-placeholder">
+                    <img src="generic-faceless-male-avatar-profile-picture-in-simple-design-for-website-or-app-vector.jpg">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+   <!-- TECH BAR -->
+<section class="tech-bar">
+
+    <div class="tech-carousel">
+
+        <div class="tech-track">
+
+            <!-- GRUPO 1 -->
+            <div class="tech-list">
+
+                <div class="tech-item html">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+
+                <div class="tech-item css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+
+                <div class="tech-item javascript">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="tech-item php">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+
+                <div class="tech-item mysql">
+                    <i class="fa-solid fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="tech-item python">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+
+                <div class="tech-item excel">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>Excel</span>
+                </div>
+
+                <div class="tech-item powerbi">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Power BI</span>
+                </div>
+
+            </div>
+
+
+            <!-- GRUPO 2 - DUPLICADO -->
+            <div class="tech-list">
+
+                <div class="tech-item html">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+
+                <div class="tech-item css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+
+                <div class="tech-item javascript">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="tech-item php">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+
+                <div class="tech-item mysql">
+                    <i class="fa-solid fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="tech-item python">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+
+                <div class="tech-item excel">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>Excel</span>
+                </div>
+
+                <div class="tech-item powerbi">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Power BI</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ABOUT -->
+    <section id="sobre-mi" class="section about">
+    <div class="container about-grid">
+
+        <div class="about-left">
+
+            <div class="services">
+
+                <div class="service">
+                    <div class="contain-service-icon">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="service-content">
+                        <h3>Web Development</h3>
+                        <p>Websites and functional web applications.</p>
+                        <div class="tags-skil">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service service-2">
+                    <div class="contain-service-icon">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="service-content">
+                        <h3>Data & BI</h3>
+                        <p>Data analysis, dashboards and reports.</p>
+                        <div class="tags-skil">
+                            <span>Excel</span>
+                            <span>Power BI</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service service-3">
+                    <div class="contain-service-icon">
+                        <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    </div>
+                    
+
+                    <div class="service-content">
+                        <h3>Automation</h3>
+                        <p>Tools and solutions to simplify processes.</p>
+                        <div class="tags-skil">
+                            <span>Python</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+           
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h2>About me</h2>
+
+            <p>
+                I'm a junior developer interested in web development,
+                data analysis and business technology. I've created
+                academic and personal projects involving information
+                management systems, databases, websites and dashboards.
+            </p>
+            
+
+            <div class="container-stats">
+                 <div class="education">
+
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <span>Educacion</span>
+                </div>
+
+                <div class="education-content">
+                    <h3>Bachiller</h3>
+                    <p>Liceo Pedro María Sosa </p>
+
+                    <div class="education-meta">
+                        <span>
+                           
+                            2015 — 2020
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Venezuela
+                        </span>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <h3>TSU en Informática</h3>
+                    <p>Arístides Bastidas</p>
+
+                    <div class="education-meta">
+                        <span>
+                   
+                            2023 — 2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Venezuela
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="stats">
+
+                <div class="stat">
+                    <div>
+                        <strong>08</strong>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    
+                    <small>Technologies</small>
+                </div>
+
+                <div class="stat">
+                    <div>
+                        <strong>05</strong>
+                        <i class="fa-solid fa-display"></i>
+                    </div>
+                    
+                    <small>Projects</small>
+                </div>
+
+            </div>
+            </div>
+           
+
+        </div>
+
+    </div>
+</section>
+
+   <!-- PROJECTS -->
+<section id="proyectos" class="section projects-section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Projects</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <article class="project">
+            <div class="contaienr-project-info">
+                <div class="project-info">
+                <h3>Sistema de Gestión Estudiantil</h3>
+                <div class="tags">
+    <span class="tag php"><i class="fa-brands fa-php"></i> PHP</span>
+    <span class="tag mysql"><i class="fa-solid fa-database"></i> MySQL</span>
+    <span class="tag javascript"><i class="fa-brands fa-js"></i> JavaScript</span>
+    <span class="tag css"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+</div>
+                <p>
+                    Sistema web para centralizar y gestionar información
+                    académica y administrativa de estudiantes.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">
+                       View Github
+                        
+                    </a>
+                    <a href="#" class="btn-primary text-link">
+                        <span>View project</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            <div class="container-project-img">
+                 <div class="project-image">
+
+    <div class="project-carousel">
+
+        <div class="project-track">
+
+            <div class="project-slide">
+                <img src="assets/project_img_1.png"
+                     alt="Sistema de Gestión Estudiantil - Vista 1">
+            </div>
+
+            <div class="project-slide">
+                <img src="assets/project_img_2.png"
+                     alt="Sistema de Gestión Estudiantil - Vista 2">
+            </div>
+
+            <div class="project-slide">
+                <img src="assets/project_img_3.png"
+                     alt="Sistema de Gestión Estudiantil - Vista 3">
+            </div>
+
+            <div class="project-slide">
+                <img src="assets/project_img_4.png"
+                     alt="Sistema de Gestión Estudiantil - Vista 4">
+            </div>
+
+        </div>
+
+        <!-- Botón anterior -->
+        <button class="carousel-btn carousel-prev"
+                type="button"
+                aria-label="Previous image">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Botón siguiente -->
+        <button class="carousel-btn carousel-next"
+                type="button"
+                aria-label="Next image">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Expandir -->
+        <button class="carousel-expand"
+                type="button"
+                aria-label="Expand project preview">
+            <i class="fa-solid fa-expand"></i>
+        </button>
+
+        <!-- Indicadores -->
+        <div class="carousel-dots"></div>
+
+    </div>
+
+    <div class="project-image-overlay"></div>
+
+</div>
+            </div>
+
+           
+        </article>
+
+   
+
+        
+    </div>
+</section>
+
+   <!-- CONTACT -->
+<section id="contacto" class="section">
+    <div class="container contact-grid">
+        <!-- Columna Izquierda: Información -->
+        <div class="contact-info">
+            <span class="section-label">CONTACTS</span>
+            <h2>Have a project?<br><span class="highlight">Let's talk!</span></h2>
+            <p class="contact-desc">
+                Estoy disponible para proyectos freelance, colaboraciones o consultas técnicas. ¡Escríbeme y hagámoslo realidad!
+            </p>
+
+            <div class="contact-details">
+                <a href="mailto:tuemail@ejemplo.com" class="direct-email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>tuemail@ejemplo.com</span>
+                </a>
+                <div class="availability-badge">
+                    <span class="status-dot"></span>
+                    <span>Disponible para nuevos proyectos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta de Formulario -->
+        <div class="contact-card">
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name">Name</label>
+                    <span class="input-line"></span>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email">Email</label>
+                    <span class="input-line"></span>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="3" required placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                    <span class="input-line"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span>Submit</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer"> <div class="footer-container"> <div class="footer-brand"> <strong>Elvis<span>.</span></strong> <p>Desarrollador Web & Analista de Datos</p> </div> <div class="footer-links"> <a href="mailto:tuemail@ejemplo.com"> <i class="fa-regular fa-envelope"></i> Email </a> <a href="#" target="_blank"> <i class="fa-brands fa-github"></i> GitHub </a> <a href="#" target="_blank"> <i class="fa-brands fa-linkedin-in"></i> LinkedIn </a> </div> <div class="footer-bottom"> <span>© 2026 Elvis Rojas</span> <span>Designed & built with <b>HTML</b>, <b>CSS</b> & <b>JavaScript</b>.</span> </div> </div>
+
+
+
+    <!-- =========================
+     PROJECT IMAGE MODAL
+========================= -->
+
+<div class="project-modal" aria-hidden="true">
+
+    <div class="project-modal-backdrop"></div>
+
+    <div class="project-modal-content" role="dialog" aria-modal="true">
+
+        <!-- Cerrar -->
+        <button
+            class="project-modal-close"
+            type="button"
+            aria-label="Close image preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Carrusel -->
+        <div class="project-modal-carousel">
+
+            <div class="project-modal-track"></div>
+
+            <!-- Anterior -->
+            <button
+                class="project-modal-btn project-modal-prev"
+                type="button"
+                aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Siguiente -->
+            <button
+                class="project-modal-btn project-modal-next"
+                type="button"
+                aria-label="Next image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="project-modal-dots"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/modal_carrusel.js"></script>
+<script src="js/carrusel.js"></script>
+<script src="js/menu.js"></script>
+
+<script src="js/animation.js"></script>
+
+
+
+<script>
+
+//     const hero = document.querySelector('.hero');
+// const stars = hero.querySelectorAll('.shooting-star');
+
+// const STAR_SPEED = 160;
+// const STAR_SIZE = 4;
+// const COLLISION_RADIUS = 20; // Distancia de choque entre estrellas (en píxeles)
+
+// let heroWidth = hero.clientWidth;
+// let heroHeight = hero.clientHeight;
+
+// window.addEventListener('resize', () => {
+//     heroWidth = hero.clientWidth;
+//     heroHeight = hero.clientHeight;
+// });
+
+// const starData = [
+//     { x: heroWidth * 0.2, y: heroHeight * 0.3, angle: 35 },
+//     { x: heroWidth * 0.8, y: heroHeight * 0.6, angle: 215 }
+// ];
+
+// function updateDirection(star) {
+//     const direction = Math.atan2(star.velocityY, star.velocityX);
+//     star.tail.style.transform = `rotate(${direction}rad)`;
+// }
+
+// function triggerImpact(star) {
+//     const head = star.element.querySelector('.star-head');
+//     head.classList.add('impact');
+//     setTimeout(() => head.classList.remove('impact'), 120);
+// }
+
+// // Inicialización
+// starData.forEach((star, index) => {
+//     const element = stars[index];
+//     const tail = element.querySelector('.star-tail');
+//     const radians = (star.angle * Math.PI) / 180;
+
+//     star.velocityX = Math.cos(radians) * STAR_SPEED;
+//     star.velocityY = Math.sin(radians) * STAR_SPEED;
+//     star.tail = tail;
+//     star.element = element;
+
+//     updateDirection(star);
+//     star.element.style.transform = `translate3d(${star.x}px, ${star.y}px, 0)`;
+// });
+
+// // Detector de choque entre las dos estrellas
+// function checkStarToStarCollision() {
+//     const s1 = starData[0];
+//     const s2 = starData[1];
+
+//     const dx = s2.x - s1.x;
+//     const dy = s2.y - s1.y;
+//     const dist = Math.hypot(dx, dy);
+
+//     if (dist < COLLISION_RADIUS && dist > 0) {
+//         // Normales de impacto
+//         const nx = dx / dist;
+//         const ny = dy / dist;
+
+//         // Velocidad relativa
+//         const kx = s1.velocityX - s2.velocityX;
+//         const ky = s1.velocityY - s2.velocityY;
+//         const p = nx * kx + ny * ky;
+
+//         // Solo rebotan si van en rumbo de colisión
+//         if (p > 0) {
+//             s1.velocityX -= p * nx;
+//             s1.velocityY -= p * ny;
+//             s2.velocityX += p * nx;
+//             s2.velocityY += p * ny;
+
+//             // Separar levemente para evitar atrapamiento físico
+//             const overlap = 0.5 * (COLLISION_RADIUS - dist);
+//             s1.x -= nx * overlap;
+//             s1.y -= ny * overlap;
+//             s2.x += nx * overlap;
+//             s2.y += ny * overlap;
+
+//             updateDirection(s1);
+//             updateDirection(s2);
+
+//             triggerImpact(s1);
+//             triggerImpact(s2);
+//         }
+//     }
+// }
+
+// let lastTime = performance.now();
+
+// function animateStars(currentTime) {
+//     const deltaTime = (currentTime - lastTime) / 1000;
+//     lastTime = currentTime;
+
+//     const dt = Math.min(deltaTime, 0.05);
+//     const halfSize = STAR_SIZE / 2;
+
+//     stars.forEach((element, index) => {
+//         const star = starData[index];
+
+//         star.x += star.velocityX * dt;
+//         star.y += star.velocityY * dt;
+
+//         let collidedWithWall = false;
+
+//         // Rebotes en las 4 paredes
+//         if (star.x <= halfSize) {
+//             star.x = halfSize;
+//             star.velocityX = Math.abs(star.velocityX);
+//             collidedWithWall = true;
+//         } else if (star.x >= heroWidth - halfSize) {
+//             star.x = heroWidth - halfSize;
+//             star.velocityX = -Math.abs(star.velocityX);
+//             collidedWithWall = true;
+//         }
+
+//         if (star.y <= halfSize) {
+//             star.y = halfSize;
+//             star.velocityY = Math.abs(star.velocityY);
+//             collidedWithWall = true;
+//         } else if (star.y >= heroHeight - halfSize) {
+//             star.y = heroHeight - halfSize;
+//             star.velocityY = -Math.abs(star.velocityY);
+//             collidedWithWall = true;
+//         }
+
+//         if (collidedWithWall) {
+//             updateDirection(star);
+//             triggerImpact(star);
+//         }
+
+//         element.style.transform = `translate3d(${star.x}px, ${star.y}px, 0)`;
+//     });
+
+//     // Validar choque de estrellas
+//     checkStarToStarCollision();
+
+//     requestAnimationFrame(animateStars);
+// }
+
+// requestAnimationFrame(animateStars);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Coloca aquí tu curriculum.pdf y cambia el enlace en index.html si es necesario.

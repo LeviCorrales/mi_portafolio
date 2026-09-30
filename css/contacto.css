@@ -1,0 +1,156 @@
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Columna Izquierda */
+.contact-info h2 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin: 12px 0 16px;
+    font-weight: 700;
+}
+
+.contact-info h2 .highlight {
+    color: var(--text, #ffffff);
+}
+
+.contact-desc {
+    color: var(--text-dark, #888888);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 400px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.direct-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text, #ffffff);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.direct-email:hover {
+    color: var(--accent);
+}
+
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-dark, #888888);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff66;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff66;
+}
+
+/* Columna Derecha: Tarjeta Contenedora */
+.contact-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--line-dark);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Inputs con Floating Labels y Línea Animada */
+.input-group {
+    position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line-dark);
+    outline: none;
+    color: var(--text-dark, #ffffff);
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-dark, #888888);
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Animación de la etiqueta al hacer foco o al escribir */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -16px;
+    font-size: 0.75rem;
+    color: var(--accent, #ffffff);
+}
+
+/* Línea de enfoque activa */
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--muted, #ffffff);
+    transition: width 0.3s ease;
+}
+
+.input-group input:focus ~ .input-line,
+.input-group textarea:focus ~ .input-line {
+    width: 100%;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+/* Adaptación Móvil */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 2.2rem;
+    }
+}

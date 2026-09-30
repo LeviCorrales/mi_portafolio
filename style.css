@@ -1,0 +1,152 @@
+/* Estilos generales para centrar la animación en la pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Fondo negro como en los frames */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+/* Contenedor principal de la animación */
+.animation-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* El elemento que crea la onda */
+.shockwave {
+    position: absolute;
+    width: 10px; /* Tamaño base muy pequeño */
+    height: 10px;
+    border-radius: 50%;
+    transform-origin: center;
+    /* La animación total dura 1.70s como pediste */
+    animation: waveEffect 1.7s ease-out infinite;
+    opacity: 0;
+}
+
+/* Definición de la animación fotograma a fotograma */
+@keyframes waveEffect {
+    /* --- Fase de Puntos (0 a 43%) --- */
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        background-color: rgb(0, 100, 255); /* Azul eléctrico */
+        border: none;
+        background-image: none;
+    }
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* 10% - Frame 1: Puntito pequeño */
+    10% {
+        transform: scale(1.5);
+        background-color: rgb(0, 100, 255);
+        border: none;
+    }
+    /* 10% a 40% - Frame 2: Punto un poco más grande */
+    /* 40% a 43% - Frame 3: Punto un poco más grande y visible */
+    40% {
+        transform: scale(3.5); /* Crecimiento continuo de los puntos */
+        background-color: rgb(0, 100, 255);
+        border: none;
+    }
+    42% {
+        transform: scale(4);
+        background-color: rgb(0, 100, 255);
+        border: none;
+    }
+
+    /* --- Fase de Aro Sólido (43% a 53%) --- */
+    /* 43% - Transición rápida: el punto desaparece, aparece el aro azul */
+    43% {
+        background-color: transparent; /* El punto desaparece */
+        border: 2px solid rgb(0, 150, 255); /* El aro azul aparece */
+        transform: scale(1.5); /* Reajuste de escala para el aro */
+        background-image: none;
+    }
+    /* 50% - Frame 5: Aro sólido grande */
+    50% {
+        transform: scale(3); /* Crecimiento del aro sólido */
+        border-width: 4px;
+        background-image: none;
+    }
+    52% {
+        transform: scale(3.5);
+        border-width: 5px;
+        background-image: none;
+    }
+
+    /* --- Fase de Anillos Concéntricos (53% a 63%) --- */
+    /* 53% - Transición: el aro sólido se fragmenta en anillos concéntricos finos */
+    53% {
+        border: none; /* El aro sólido desaparece */
+        background-color: transparent;
+        /* Simulamos anillos concéntricos fragmentados usando degradado radial */
+        background-image: repeating-radial-gradient(
+            circle at center,
+            transparent,
+            transparent 0.5%,
+            rgb(0, 150, 255) 0.5%,
+            rgb(0, 150, 255) 1%
+        );
+        transform: scale(3.5); /* La escala se mantiene igual en la transición */
+    }
+    /* 57% - Frame 7: El anillo discontinuo se expande, las líneas se alargan */
+    57% {
+        transform: scale(5); /* Crecimiento de los anillos concéntricos */
+        /* Mismo degradado, pero estirado por la escala */
+        background-image: repeating-radial-gradient(
+            circle at center,
+            transparent,
+            transparent 0.5%,
+            rgb(0, 150, 255) 0.5%,
+            rgb(0, 150, 255) 1%
+        );
+    }
+    60% {
+        transform: scale(6.5);
+        background-image: repeating-radial-gradient(
+            circle at center,
+            transparent,
+            transparent 0.5%,
+            rgb(0, 150, 255) 0.5%,
+            rgb(0, 150, 255) 1%
+        );
+    }
+    62% {
+        transform: scale(7.5);
+        background-image: repeating-radial-gradient(
+            circle at center,
+            transparent,
+            transparent 0.5%,
+            rgb(0, 150, 255) 0.5%,
+            rgb(0, 150, 255) 1%
+        );
+    }
+
+    /* --- Fase Final (63% a 100%) --- */
+    /* 63-100%: Expansión dramática y desvanecimiento final */
+    100% {
+        transform: scale(15); /* Expansión dramática */
+        opacity: 0; /* Desvanecimiento total */
+        border: none;
+        background-color: transparent;
+        background-image: repeating-radial-gradient(
+            circle at center,
+            transparent,
+            transparent 0.5%,
+            rgb(0, 150, 255) 0.5%,
+            rgb(0, 150, 255) 1%
+        );
+    }
+}

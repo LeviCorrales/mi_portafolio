@@ -1,0 +1,322 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Audiowide&family=Bruno+Ace+SC&family=Goldman:wght@400;700&family=Iceberg&family=Michroma&family=Nabla&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+
+/* =========================
+   TEMA OSCURO (Por defecto)
+========================= */
+:root {
+    --white: #fff;
+    --text: #efefef;
+    --text-dark: #b6a5a5;
+    --muted: #90878a;
+    --gris: #c8b4ff4d;
+
+    --bg: #020202;
+    --bg-soft: #0d0808;
+    --bg-light: #221212;
+
+    --line: #76212e;
+    --line-dark: #1b1012;
+
+    --accent: #761a1e;
+    --nav: #00000074;
+
+    --sombra: #1901014d;
+    --sombra-light: #ffffff26;
+
+    --red-s1: #ffdcdcf2;
+    --red-s2: #ff3d51cc;
+    --red-s3: #ff3b4f59;
+    --red-s4: #ff3b4f1f;
+    --red-s5: #ff3b4f08;
+    
+    /* Colores de marca y fondos (Se mantienen igual en ambos temas) */
+    --js: #f7df1e;
+    --css: #264de4;
+    --html: #e44d26;
+    --php: #777bb4;
+    --py: #3776ab;
+    --excel: #217346;
+    --power-bi: #f2c811;
+    --my-sql: #00758f;
+    
+    --circle-1: #4300601c;
+    --circle-2: #006f5f1a;
+    --circle-3: #007c9b1a;
+}
+
+.body{
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   TEMA CLARO
+========================= */
+body.light-theme {
+    --white: #fff; /* Si usas --white para iconos o botones fijos, mantenlo. Si es para el fondo de las tarjetas, cámbialo a #000 */
+    
+    /* Textos oscuros para contrastar con el fondo blanco */
+    --text: #1a1a1a;
+    --text-dark: #4a4a4a;
+    --muted: #736b6d;
+    --gris: #4a3b704d; /* Un gris violáceo adaptado para fondo claro */
+
+    /* Fondos claros */
+    --bg: #ffffff;          /* Fondo principal blanco */
+    --bg-soft: #f7f4f4;     /* Fondo secundario ligeramente gris/rojizo */
+    --bg-light: #ebe3e3;    /* Equivalente a tu fondo claro (para tarjetas/secciones) */
+
+    /* Líneas más suaves */
+    --line: #e3c4c8;        /* Línea rojiza clara */
+    --line-dark: #d1b8bb;   /* Línea un poco más oscura */
+
+    /* Acento y Navegación */
+    --accent: #a3242a;      /* Rojo un poco más vivo para que destaque en blanco sin perder la esencia */
+    --nav: #ffffffb3;       /* Navegación semi-transparente clara (efecto cristal) */
+
+    /* Sombras invertidas (sombras oscuras en fondos claros) */
+    --sombra: #0000001a;       /* Sombra suave */
+    --sombra-light: #0000000d; /* Sombra muy sutil */
+
+    /* Sombras rojas (ligeramente ajustadas para que se vean bien sobre blanco) */
+    --red-s1: #ff2a44f2;
+    --red-s2: #ff3d51cc;
+    --red-s3: #ff3b4f59;
+    --red-s4: #ff3b4f1f;
+    --red-s5: #ff3b4f08;
+
+    /* Círculos de fondo (un poco más opacos para que se noten sobre el blanco) */
+    --circle-1: #43006026;
+    --circle-2: #006f5f26;
+    --circle-3: #007c9b26;
+}
+
+/* ========================================
+   TECH BAR
+======================================== */
+
+.tech-bar {
+    background: var(--bg);
+    padding: 20px 0;
+    overflow: hidden;
+}
+/* CONTENEDOR DEL CARRUSEL */
+
+.tech-carousel {
+    width: min(1200px, 85%);
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* SOMBREADO / DESVANECIMIENTO IZQUIERDO */
+
+.tech-carousel::before {
+    content: "";
+
+    position: absolute;
+    z-index: 5;
+
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 100%;
+
+    background: linear-gradient(
+        to right,
+        var(--bg),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* SOMBREADO / DESVANECIMIENTO DERECHO */
+
+.tech-carousel::after {
+    content: "";
+
+    position: absolute;
+    z-index: 5;
+
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100%;
+
+    background: linear-gradient(
+        to left,
+        var(--bg),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* TRACK */
+
+.tech-track {
+    display: flex;
+
+    width: max-content;
+
+    animation: tech-scroll 25s linear infinite;
+}
+
+
+/* CADA GRUPO */
+
+.tech-list {
+    display: flex;
+    align-items: center;
+
+    gap: 55px;
+
+    padding-right: 55px;
+
+    flex-shrink: 0;
+}
+
+
+/* ITEM */
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    white-space: nowrap;
+
+    color: var(--muted);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    transition: .25s ease;
+}
+
+
+/* ICONOS */
+
+.tech-item i {
+    font-size: 1.5rem;
+
+    transition: .25s ease;
+}
+
+
+/* COLORES */
+
+.tech-item.html i {
+    color: var(--html)6;
+}
+
+.tech-item.css i {
+    color: var(--css);
+}
+
+.tech-item.javascript i {
+    color: var(--js);
+}
+
+.tech-item.php i {
+    color: var(--php);
+}
+
+.tech-item.mysql i {
+    color: var(--my-sql);
+}
+
+.tech-item.python i {
+    color: var(--py);
+}
+
+.tech-item.excel i {
+    color: var(--excel);
+}
+
+.tech-item.powerbi i {
+    color: var(--power-bi);
+}
+
+
+/* HOVER */
+
+.tech-item:hover {
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+.tech-item:hover i {
+    transform: scale(1.15);
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes tech-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* SECTIONS */
+
+.container {
+    width: min(1200px, 88%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .container {
+    width: 92%;
+    margin: auto;
+}
+   
+}
+
+@media (max-width: 500px) {
+
+    .section {
+        padding: 50px 0;
+    }
+}

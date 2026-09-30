@@ -1,0 +1,621 @@
+/* -----------------------------------------
+   ONDA
+   ----------------------------------------- */
+
+.hero-wave {
+    position: absolute;
+
+    /*
+       Este punto es el origen de la onda.
+
+       39% = posición horizontal.
+       50% = posición vertical.
+
+       Lo ponemos aproximadamente detrás
+       del nombre.
+    */
+    left: 30%;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    border-radius: 50%;
+
+    border: 1.5px solid #301515;
+
+    box-shadow: 0 0 10px #42000034;
+
+    pointer-events: none;
+
+    /*
+       La onda queda detrás de absolutamente
+       todo el contenido del hero.
+    */
+    z-index: 1;
+
+    /*
+       1.73s = duración aproximada del video.
+    */
+    animation: none;
+
+    will-change: transform, opacity, border-width;
+}
+
+
+    .hero-wave.wave-active {
+    animation: heroWave 4s forwards;
+}
+
+
+
+@keyframes heroWave {
+
+    /* -----------------------------------------
+       0% — PUNTO INICIAL
+       ----------------------------------------- */
+    0% {
+        width: 0px;
+        height: 0px;
+
+        border-width: 1px;
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+    }
+
+    /* -----------------------------------------
+       15% — PUNTO INICIAL
+       ----------------------------------------- */
+    5% {
+        width: 1px;
+        height: 1px;
+
+        border-width: 5px;
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.25);
+    }
+
+
+    /* -----------------------------------------
+       45% — PEQUEÑA ESPERA
+       ----------------------------------------- */
+    20% {
+        width: 1px;
+        height: 1px;
+
+        border-width: 10px;
+        opacity: .55;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.50);
+    }
+
+
+    /* -----------------------------------------
+       50% — EXPLOSIÓN
+       ----------------------------------------- */
+    23% {
+        width: 12vmax;
+        height: 12vmax;
+
+        border-width: 50px;
+        border-color: #3c0a0a;
+        opacity: 1;
+
+        box-shadow: 0 0 10px #3603038c;
+    
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       50% — EXPLOSIÓN MUY RÁPIDA
+       ----------------------------------------- */
+    24% {
+        width: 40vmax;
+        height: 40vmax;
+
+        border-width: 4px;
+        opacity: .8;
+        border-color: #301515;
+        box-shadow:
+            0 0 14px rgba(215, 24, 24, 0.4),
+            0 0 30px rgba(215, 24, 24, 0.14);
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       58% — GRAN SALTO DE EXPANSIÓN
+       ----------------------------------------- */
+    26% {
+        width: 50vmax;
+        height: 50vmax;
+
+        border-width: 5px;
+        opacity: .6;
+        border-color: #301515;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    /* -----------------------------------------
+       58% — GRAN SALTO DE EXPANSIÓN
+       ----------------------------------------- */
+    32% {
+        width: 60vmax;
+        height: 60vmax;
+
+        border-width: 5px;
+        opacity: .3;
+        border-color: #301515;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       66% — TODAVÍA CRECE, PERO YA FRENA
+       ----------------------------------------- */
+    40% {
+        width: 65vmax;
+        height: 65vmax;
+
+        border-width: 3px;
+        opacity: .1;
+        border-color: #301515;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       74% — PUNTO MÁXIMO
+       ----------------------------------------- */
+    45% {
+        width: 70vmax;
+        height: 70vmax;
+        border-color: #301515;
+        border-width: 1.1px;
+        opacity: .1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       82% — EXPANSIÓN MUY LENTA
+       ----------------------------------------- */
+    60% {
+        width: 73vmax;
+        height: 73vmax;
+        border-color: #301515;
+        border-width: 1px;
+        opacity: .2;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       90% — CASI DESAPARECIDA
+       ----------------------------------------- */
+    75% {
+        width: 77vmax;
+        height: 77vmax;
+        border-color: #301515;
+        border-width: 1px;
+        opacity: .1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+     /* -----------------------------------------
+       90% — CASI DESAPARECIDA
+       ----------------------------------------- */
+    90% {
+        width: 77vmax;
+        height: 77vmax;
+        border-color: #301515;
+        border-width: 1px;
+        opacity: .1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       100% — DESAPARECE
+       ----------------------------------------- */
+    100% {
+        width: 80vmax;
+        height: 80vmax;
+        border-color: #301515;
+        border-width: 0;
+        opacity: 0;
+
+        box-shadow: none;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ONDAS DE LA FOTO
+========================= */
+
+.pulse {
+    position: absolute;
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+    border: 1px solid;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation:
+        pulse-explosion
+        4.5s
+        cubic-bezier(.08, .72, .18, 1)
+        infinite;
+}
+
+
+/* Cada onda tiene un rojo ligeramente diferente */
+
+.pulse-1 {
+    border-color: var(--red-s2);
+
+    box-shadow:
+        0 0 4px var(--red-s4),
+        0 0 12px var(--red-s5);
+
+    animation-delay: 0s;
+}
+
+.pulse-2 {
+    border-color: var(--red-s3);
+
+    box-shadow:
+        0 0 5px var(--red-s4),
+        0 0 16px var(--red-s5);
+
+    animation-delay: 1.5s;
+}
+
+.pulse-3 {
+    border-color: var(--red-s4);
+
+    box-shadow:
+        0 0 6px var(--red-s4),
+        0 0 20px var(--red-s5);
+
+    animation-delay: 3s;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes pulse-explosion {
+
+    0% {
+        transform: scale(.85);
+        opacity: 0;
+        filter: blur(0px);
+    }
+
+    5% {
+        opacity: .65;
+        filter: blur(0px);
+    }
+
+    18% {
+        opacity: .48;
+    }
+
+    40% {
+        opacity: .30;
+        filter: blur(.3px);
+    }
+
+    65% {
+        opacity: .14;
+        filter: blur(1px);
+    }
+
+    82% {
+        opacity: .05;
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: scale(2.35);
+        opacity: 0;
+        filter: blur(4px);
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   ESTRELLAS FUGACES HERO (LUMINOSAS + IMPACTO)
+   ========================================= */
+
+.shooting-star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+    will-change: transform;
+}
+
+/* Núcleo de la estrella */
+.star-head {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: -2px;
+    top: -2px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #ff2a44,
+        0 0 22px #ff0022;
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+/* Destello luminoso al chocar */
+.star-head.impact {
+    transform: scale(2.4);
+    background: #ffffff;
+    box-shadow:
+        0 0 10px #ffffff,
+        0 0 25px #ff2a44,
+        0 0 45px #ff0022;
+}
+
+/* Cola de la estrella */
+.star-tail {
+    position: absolute;
+    width: 70px;
+    height: 1.5px;
+    left: -70px;
+    top: -0.75px;
+    transform-origin: right center;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 42, 68, 0.25),
+        rgba(255, 120, 120, 0.85),
+        #ffffff
+    );
+    box-shadow: 0 0 8px rgba(255, 42, 68, 0.8);
+}
+
+
+
+
+
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+/* Base unificada para los botones */
+.btn-hero {
+    position: relative; /* Necesario para posicionar los efectos internos/externos */
+    min-width: 180px;
+    padding: 12px 24px; /* Ligeramente ajustado para compensar los bordes visuales */
+    border-radius: 50px;
+    font-family: "Goldman", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate; /* Crea un nuevo contexto de apilamiento para los z-index */
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hero span {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   BOTÓN 1: LÍNEA LUMINOSA MULTICOLOR RECORRIENDO EL BORDE
+========================================== */
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.btn-primary-hero {
+    position: relative;
+    background: var(--accent);
+    color: var(--text-dark);
+    border: 2px solid transparent; 
+    overflow: hidden; 
+    z-index: 1;
+    transition: background 0.3s ease, color 0.3s ease;
+    
+}
+
+/* 1.1 Fondo negro interior */
+.btn-primary-hero::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: #050505;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    /* Al SALIR del hover: Desvanece el fondo negro suavemente */
+    transition: opacity 0.3s ease;
+}
+
+/* 1.2 La línea de luz rotatoria */
+.btn-primary-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    aspect-ratio: 1;
+    background: conic-gradient(
+        from 0deg,
+        #ffffff 0%,
+        #00000000 25%,
+        #00000000 50%,
+        #f5cdcd 75%,
+        #ffffff 100%
+    );
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: -2;
+    opacity: 0;
+    /* Al SALIR del hover: Apaga la luz de inmediato para que no trasluzca */
+    transition: opacity 0s;
+}
+
+/* 1.3 Acciones Hover */
+.btn-primary-hero:hover {
+    color: var(--text, #ffffff);
+    background: transparent;
+}
+
+.btn-primary-hero:hover::after {
+    opacity: 1;
+    /* Al ENTRAR al hover: Tapado negro instantáneo */
+    transition: opacity 0s;
+}
+
+.btn-primary-hero:hover::before {
+    opacity: 1;
+    /* Al ENTRAR al hover: Entra la luz suavemente */
+    transition: opacity 0.3s ease;
+    animation: rotar-borde 2.5s linear infinite;
+}
+
+@keyframes rotar-borde {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ==========================================
+   BOTÓN 2: RETROILUMINACIÓN BLANCA (ECLIPSE)
+========================================== */
+.btn-secondary-hero {
+    /* border: 2px solid var(--text-dark); */
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    /* Transición suave para que la luz se encienda fluidamente */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+.btn-secondary-hero:hover {
+    /* 1. El cuerpo del botón actúa como el objeto que bloquea la luz */
+    background: #050505; 
+    color: #ffffff; /* Texto brillante para contrastar */
+    border-color: transparent; /* Desaparece el borde sólido */
+    
+    /* 2. Capas de Box-Shadow para simular dispersión de luz volumétrica */
+    box-shadow: 
+        0 0 4px rgba(255, 255, 255, 0.9),   /* Núcleo de la luz: muy intenso y pegado al borde */
+        0 0 12px rgba(255, 255, 255, 0.6),  /* Difusión media: la luz empieza a escapar */
+        0 0 25px rgba(255, 255, 255, 0.3),  /* Halo exterior: suave y amplio */
+        0 0 45px rgba(255, 255, 255, 0.1);  /* Estela final: se desvanece en el fondo oscuro */
+}
+
+/* Micro-interacción del icono de descarga */
+.btn-secondary-hero span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary-hero:hover span {
+    transform: translateY(3px); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .hero-wave {
+  
+    left: 50%;
+    top: 65%;
+
+
+  
+}
+}
