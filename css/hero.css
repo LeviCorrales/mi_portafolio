@@ -15,7 +15,7 @@
     top: 15%;
     left: 0%;
     transform: translateY(-50%);
-    background: #ad040440; /* Rojo con transparencia */
+    background: #bc050540; /* Rojo con transparencia */
     filter: blur(110px);
     border-radius: 50%;
     pointer-events: none;

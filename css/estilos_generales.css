@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Audiowide&family=Bruno+Ace+SC&family=Goldman:wght@400;700&family=Iceberg&family=Michroma&family=Nabla&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
 
 
+
 /* =========================
    TEMA OSCURO (Por defecto)
 ========================= */
@@ -12,9 +13,9 @@
     --muted: #90878a;
     --gris: #c8b4ff4d;
 
-    --bg: #020202;
-    --bg-soft: #0d0808;
-    --bg-light: #221212;
+    --bg: #0c0b0b;
+    --bg-soft: #121010;
+    --bg-light: #331b1b;
 
     --line: #76212e;
     --line-dark: #1b1012;
