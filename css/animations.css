@@ -612,10 +612,13 @@
 @media (max-width: 800px) {
     .hero-wave {
   
-    left: 50%;
-    top: 65%;
+    display: none;
 
 
   
+}
+
+.pulse{
+    display: none;
 }
 }
