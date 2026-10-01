@@ -612,7 +612,8 @@
 @media (max-width: 800px) {
     .hero-wave {
   
-    display: none;
+    left: 50%;
+    top: 65%;
 
 
   
