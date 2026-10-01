@@ -83,11 +83,11 @@
 }
 
 /* ========================= RESPONSIVE ========================= */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .footer {
     padding-top: 45px;
     padding-bottom: 65px;
-  
+    margin-bottom: -65px;
   }
 
   .footer-links {
