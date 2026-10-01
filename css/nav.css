@@ -269,12 +269,18 @@ body {
 }
 @media (max-width: 800px) {
 
+    .lang-btn {
+    border: none;
+    padding: 7px 15px;
+  
+}
+
     .header {
-        height: 65px;
+        height: 55px;
     }
 
     .nav {
-        height: 65px;
+        height: 55px;
         padding: 0 20px;
         width: 100%;
     }
