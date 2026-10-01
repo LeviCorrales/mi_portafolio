@@ -4,7 +4,7 @@
     min-height: calc(100vh - 65px);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(350deg, #140203 0%, #0b0001 40%, #050001 100%);
+    background: linear-gradient(350deg, var(--red-s2) 0%, var(--red-s3) 40%, var(--red-s4) 100%);
 }
 /* Esfera luminosa difusa */
 .hero::before {
@@ -15,7 +15,7 @@
     top: 15%;
     left: 0%;
     transform: translateY(-50%);
-    background: #bc050540; /* Rojo con transparencia */
+    background: var(--red-s1); /* Rojo con transparencia */
     filter: blur(110px);
     border-radius: 50%;
     pointer-events: none;
@@ -38,20 +38,20 @@
 }
 
 .greeting {
-    font-family: "Goldman", sans-serif;
-    font-size: clamp(2.7rem, 4.2vw, 4.3rem);
+    font-family: "Genos", sans-serif;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 400;
     margin-bottom: 12px;
 }
 
 .hero h1 {
-    font-family: "Bruno Ace SC", sans-serif;
+   font-family: "Bruno Ace SC", sans-serif;
     font-weight: 400;
-    font-size: clamp(3.1rem, 5vw, 5rem);
+    font-size: 5rem;
     line-height: .98;
     letter-spacing: -2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero h1 span {
@@ -62,10 +62,10 @@
 
 .hero h2 {
     color: var(--muted-2);
-    font-family: "Goldman", sans-serif;
-    font-size: 1.6rem;
+   
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 27px;
+    margin-bottom: 15px;
 }
 
 .description {
@@ -87,8 +87,8 @@
     min-width: 180px;
     padding: 12px 24px; /* Ligeramente ajustado para compensar los bordes visuales */
     border-radius: 50px;
-    font-family: "Goldman", sans-serif;
-    font-size: 1rem;
+    font-family: "Genos", sans-serif;
+
     font-weight: 400;
     text-align: center;
     text-decoration: none;
@@ -140,7 +140,6 @@
     border-radius: 50%;
     display: grid;
     place-items: center;
-    font-family: Arial, sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     transition: transform .1s cubic-bezier(.4, 0, .2, 1),
@@ -540,15 +539,15 @@
     /* ---------- TEXTO ---------- */
 
     .greeting {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
     }
 
     .hero h2 {
-        font-size: 1.05rem;
+        font-size: 1.2rem;
     }
 
     .description {
@@ -579,37 +578,4 @@
 }
 
 
-/* =========================
-   MÓVILES MUY PEQUEÑOS
-   ========================= */
-
-@media (max-width: 340px) {
-
-    .portrait-ring {
-        width: 200px;
-        height: 200px;
-    }
-
-    .portrait-placeholder {
-        width: 150px;
-        height: 150px;
-    }
-
-    .greeting {
-        font-size: 1.8rem;
-    }
-
-    .hero h1 {
-        font-size: 2.05rem;
-    }
-
-    .hero h2 {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: .84rem;
-    }
-
-}
 

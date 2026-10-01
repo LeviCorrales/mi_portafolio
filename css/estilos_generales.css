@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Audiowide&family=Bruno+Ace+SC&family=Goldman:wght@400;700&family=Iceberg&family=Michroma&family=Nabla&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Audiowide&family=Bruno+Ace+SC&family=Genos:ital,wght@0,100..900;1,100..900&family=Goldman:wght@400;700&family=Michroma&family=Syne+Mono&display=swap');
 
 
 
@@ -15,10 +15,11 @@
 
     --bg: #0c0b0b;
     --bg-soft: #121010;
-    --bg-light: #331b1b;
+    --bg-soft-2: #1b1818;
+    --bg-light: #3c1b1b;
 
-    --line: #76212e;
-    --line-dark: #1b1012;
+    --line: #3c1b1b;
+    --line-dark: #4a2222;
 
     --accent: #761a1e;
     --nav: #040000d5;
@@ -26,11 +27,11 @@
     --sombra: #1901014d;
     --sombra-light: #ffffff26;
 
-    --red-s1: #ffdcdcf2;
-    --red-s2: #ff3d51cc;
-    --red-s3: #ff3b4f59;
-    --red-s4: #ff3b4f1f;
-    --red-s5: #ff3b4f08;
+    --red-s1: #bc050540;
+    --red-s2: #140203;
+    --red-s3: #0b0001;
+    --red-s4: #050001;
+
     
     /* Colores de marca y fondos (Se mantienen igual en ambos temas) */
     --js: #f7df1e;
@@ -47,26 +48,6 @@
     --circle-3: #007c9b1a;
 }
 
-.body{
-    font-family: 'Poppins', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
 /* =========================
    TEMA CLARO
@@ -90,25 +71,40 @@ body.light-theme {
     --line-dark: #d1b8bb;   /* Línea un poco más oscura */
 
     /* Acento y Navegación */
-    --accent: #a3242a;      /* Rojo un poco más vivo para que destaque en blanco sin perder la esencia */
+    --accent: #8784da;      /* Rojo un poco más vivo para que destaque en blanco sin perder la esencia */
     --nav: #ffffffb3;       /* Navegación semi-transparente clara (efecto cristal) */
 
     /* Sombras invertidas (sombras oscuras en fondos claros) */
     --sombra: #0000001a;       /* Sombra suave */
     --sombra-light: #0000000d; /* Sombra muy sutil */
 
-    /* Sombras rojas (ligeramente ajustadas para que se vean bien sobre blanco) */
-    --red-s1: #ff2a44f2;
-    --red-s2: #ff3d51cc;
-    --red-s3: #ff3b4f59;
-    --red-s4: #ff3b4f1f;
-    --red-s5: #ff3b4f08;
-
-    /* Círculos de fondo (un poco más opacos para que se noten sobre el blanco) */
-    --circle-1: #43006026;
-    --circle-2: #006f5f26;
-    --circle-3: #007c9b26;
+  
 }
+
+.body{
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 /* ========================================
    TECH BAR
@@ -196,7 +192,7 @@ body.light-theme {
     display: flex;
     align-items: center;
 
-    gap: 55px;
+    gap: 65px;
 
     padding-right: 55px;
 
@@ -209,14 +205,14 @@ body.light-theme {
 .tech-item {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 10px;
 
     white-space: nowrap;
 
     color: var(--muted);
 
     font-size: 1.2rem;
-    font-weight: 600;
+  
 
     transition: .25s ease;
 }
@@ -225,7 +221,7 @@ body.light-theme {
 /* ICONOS */
 
 .tech-item i {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     transition: .25s ease;
 }
@@ -234,7 +230,7 @@ body.light-theme {
 /* COLORES */
 
 .tech-item.html i {
-    color: var(--html)6;
+    color: var(--html);
 }
 
 .tech-item.css i {
@@ -266,16 +262,7 @@ body.light-theme {
 }
 
 
-/* HOVER */
 
-.tech-item:hover {
-    color: var(--text);
-    transform: translateY(-2px);
-}
-
-.tech-item:hover i {
-    transform: scale(1.15);
-}
 
 
 /* ANIMACIÓN */
@@ -304,6 +291,11 @@ body.light-theme {
     padding: 100px 0;
 }
 
+.section h2{
+    font-size: 2.5rem;
+
+    line-height: 1.2;
+}
 
 
 
@@ -320,4 +312,27 @@ body.light-theme {
     .section {
         padding: 50px 0;
     }
+
+    #sobre-mi{
+        padding: 20px 0;
+    }
+
+    .tech-list {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    padding-right: 55px;
+
+    flex-shrink: 0;
+
+
+}
+
+.tech-bar {
+    background: var(--bg);
+    padding: 0px 0;
+    overflow: hidden;
+}
 }

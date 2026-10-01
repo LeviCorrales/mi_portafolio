@@ -199,9 +199,10 @@ body {
    BOTÓN TEMA
 ========================= */
 .theme-btn {
+    
     width: 38px;
     height: 38px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--accent);
@@ -249,7 +250,7 @@ body {
 
 .lang-btn {
     border: none;
-    padding: 7px 11px;
+    padding: 10px 17px;
     background: transparent;
     color: var(--muted);
     font-size: 12px;
