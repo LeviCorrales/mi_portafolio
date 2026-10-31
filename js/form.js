@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  const emailDestino = "TU_CORREO@EJEMPLO.COM";
+  const emailDestino = "elvisramses24@gmail.com";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
