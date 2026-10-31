@@ -224,13 +224,13 @@
 .portrait-placeholder {
     position: relative;
 
-    width: 270px;
-    height: 270px;
+    width: 350px;
+    height: 350px;
 
     border-radius: 50%;
     overflow: hidden;
 
-    border: 1px solid var(--line);
+    border: 25px solid var(--bg-soft);
 
     z-index: 5;
 
@@ -240,7 +240,7 @@
 .portrait-placeholder img {
     width: 100%;
     height: 100%;
-
+  
     object-fit: cover;
     display: block;
 }

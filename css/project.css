@@ -49,7 +49,7 @@
     color: var(--muted);
     font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid var(--sombra);
+    
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 

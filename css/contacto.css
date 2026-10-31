@@ -1,12 +1,17 @@
 
 
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+    margin-bottom: 200px;
 }
 
+#contacto{
+padding: 100px 0 0px 0;
+}
 /* Columna Izquierda */
 .contact-info h2 {
     font-size: 2.8rem;
@@ -132,6 +137,13 @@
 .input-group input:focus ~ .input-line,
 .input-group textarea:focus ~ .input-line {
     width: 100%;
+}
+
+.form-honey {
+    position: absolute;
+    left: -5000px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contact-form button {

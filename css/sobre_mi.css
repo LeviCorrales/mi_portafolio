@@ -225,7 +225,7 @@
 
 .education-content{
     padding: 10px 0px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line-dark);
 }
 .education-content h3 {
     font-size: 1.3rem;
