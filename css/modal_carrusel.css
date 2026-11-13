@@ -241,12 +241,11 @@
 
     display: flex;
     align-items: center;
-    gap: 7px;
-    padding: 7px 10px;
+    gap: 5px;
+    padding: 8px 15px;
 
     transform: translateX(-50%);
 
-    border: 1px solid var(--sombra-light);
     border-radius: 50px;
     background: rgba(0, 0, 0, .45);
 
@@ -254,11 +253,11 @@
 }
 
 .project-modal-dot {
-    width: 6px;
-    height: 6px;
+    width: 20px;
+    height: 7px;
     padding: 0;
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background: var(--sombra-light);
     cursor: pointer;
 
@@ -269,8 +268,8 @@
 }
 
 .project-modal-dot.active {
-    width: 20px;
-    border-radius: 10px;
+    width: 40px;
+
     background: var(--accent);
     box-shadow: 0 0 8px var(--line);
 }
