@@ -1,3 +1,48 @@
+
+
+/* Estado inicial: elementos ocultos */
+.reveal {
+    opacity: 0;
+    filter: blur(5px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+/* Elementos que aparecen desde la izquierda */
+.reveal-left {
+    transform: translateX(-60px);
+}
+
+/* Elementos que aparecen desde la derecha */
+.reveal-right {
+    transform: translateX(60px);
+}
+
+/* Elementos que aparecen desde abajo */
+.reveal-up {
+    transform: translateY(40px);
+}
+
+/* Estado visible */
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+}
+
+
 /* -----------------------------------------
    ONDA
    ----------------------------------------- */

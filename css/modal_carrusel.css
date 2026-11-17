@@ -1,4 +1,3 @@
-
 /* =========================================
    PROJECT IMAGE MODAL
 ========================================= */
@@ -56,7 +55,7 @@
     position: relative;
     z-index: 2;
 
-   
+
     max-width: 1000px;
     height: auto;
     aspect-ratio: 2/1;
@@ -68,9 +67,10 @@
     opacity: 0;
 
     transition:
-        transform .35s cubic-bezier(.2,.8,.2,1),
+        transform .35s cubic-bezier(.2, .8, .2, 1),
         opacity .25s ease;
 }
+
 .project-modal.active .project-modal-content {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -100,13 +100,14 @@
 
 .project-modal-track {
     display: flex;
-    align-items: center; /* MODIFICADO: Centra las imágenes verticalmente */
+    align-items: center;
+    /* MODIFICADO: Centra las imágenes verticalmente */
 
     width: 100%;
     height: 100%;
     border-radius: 25px;
-  
-    transition: transform .5s cubic-bezier(.77,0,.18,1);
+
+    transition: transform .5s cubic-bezier(.77, 0, .18, 1);
 }
 
 
@@ -135,6 +136,7 @@
 
     object-fit: contain;
 }
+
 /* =========================================
    CLOSE BUTTON
 ========================================= */
@@ -212,8 +214,13 @@
         transform .25s ease;
 }
 
-.project-modal-prev { left: 18px; }
-.project-modal-next { right: 18px; }
+.project-modal-prev {
+    left: 18px;
+}
+
+.project-modal-next {
+    right: 18px;
+}
 
 .project-modal-btn:hover {
     background: var(--bg-light);
@@ -273,6 +280,7 @@
     background: var(--accent);
     box-shadow: 0 0 8px var(--line);
 }
+
 /* =========================================
    BODY LOCK
 ========================================= */
@@ -562,4 +570,3 @@ body.modal-open {
     }
 
 }
-
