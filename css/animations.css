@@ -520,7 +520,7 @@
 }
 
 .btn-hero span {
-    margin-right: 8px;
+  
     transition: transform 0.3s ease;
 }
 
@@ -613,7 +613,7 @@
     color: var(--text-dark);
     background-color: var(--bg-light);
     /* Transición suave para que la luz se encienda fluidamente */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+
 }
 
 .btn-secondary-hero:hover {
@@ -632,12 +632,12 @@
 
 /* Micro-interacción del icono de descarga */
 .btn-secondary-hero span {
-    display: inline-block;
+
     transition: transform 0.3s ease;
 }
 
 .btn-secondary-hero:hover span {
-    transform: translateY(3px); 
+
 }
 
 

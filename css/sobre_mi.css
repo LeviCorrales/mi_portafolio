@@ -99,6 +99,11 @@
     transition: .3s ease;
 }
 
+.service-icon svg{
+    width: 40px;
+    height: 40px;
+}
+
 .service:hover .service-icon {
 
     background: var(--bg-light);
@@ -201,15 +206,14 @@
 
     font-size: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase;
+
     letter-spacing: .12em;
 
    
 }
 
 .education-icon {
-    width: 34px;
-    height: 34px;
+    
     font-size: .8rem;
     display: flex;
     align-items: center;
@@ -217,9 +221,11 @@
 
     border-radius: 8px;
 
-    background: var(--bg-light);
+}
 
-    color: var(--text-dark);
+.education-icon svg{
+     width: 30px;
+    height: 30px;
 }
 
 
@@ -256,9 +262,6 @@
     gap: 6px;
 }
 
-.education-meta i {
-    color: var(--accent);
-}
 .stats {
     width: 30%;
     display: flex;
@@ -293,10 +296,11 @@
     font-weight: 600;
 }
 
-.stat div i{
-    font-size: 1.8rem;
+.stat div svg{
+    width: 35px;
+    height: 35px;
    
-    color: var(--accent);
+    color: var(--muted);
 }
 
 
